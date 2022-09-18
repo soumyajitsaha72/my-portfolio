@@ -1,46 +1,8 @@
 <div class="home" #vantaEl>
-    <button (click)="onClick(vantaEl)">Click me for MAGIC 🎩</button>
-    <div class="margin-50 flex-row">
-        <img class="left-img"
-            src="https://valenguerra.github.io/valenguerra/assets/421679c2a92b6a64a8ceaf18c21f26d8.png" alt="">
-        <div class="name-title">
-            <h1 class="name">Soumyajit Saha</h1>
-            <h2 class="title">Web Developer / Angular</h2>
-        </div>
-        <div class="photo">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ba/29/5c/img-worlds-of-adventure.jpg?w=1200&h=1200&s=1"
-                alt="soumyajit-photo">
-        </div>
-
-    </div>
-
-    <div class="hello glass margin-50">
-        <div class="hello-top">
-            <div>Hello</div>
-            <div>
-                <a href="">github</a>
-                <a href="">linkedIn</a>
-            </div>
-        </div>
-        <div class="hello-middle">I am a software developer from adra, India, who loves to create and explore new things
-        </div>
-        <div class="hello-bottom">
-            <button>about me!</button>
-            <button>about me!</button>
-            <button>about me!</button>
-            <button>about me!</button>
-        </div>
-    </div>
-
-    <div class="hello glass margin-50">
-
-    </div>
-
-    <div class="hello glass margin-50">
-
-    </div>
-
-    <div class="footer margin-50">
-        <div>a soumyajit saha creation &copy; {{ date }}</div>
-    </div>
+    <app-intro></app-intro>
+    <app-about-me></app-about-me>
+    <app-skills></app-skills>
+    <app-projects></app-projects>
+    <app-contact-me></app-contact-me>
+    <app-footer></app-footer>
 </div>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import RINGS from "vanta/dist/vanta.waves.min.js";
 import * as THREE from "three";
 
@@ -7,19 +7,19 @@ import * as THREE from "three";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  date: Number;
+export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChild('vantaEl') vantaRef: ElementRef;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.date = new Date().getFullYear();
+
   }
 
-  onClick(vanta: ElementRef) {
+  ngAfterViewInit(): void {
     RINGS({
       THREE: THREE,
-      el: vanta,
+      el: this.vantaRef.nativeElement,
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
