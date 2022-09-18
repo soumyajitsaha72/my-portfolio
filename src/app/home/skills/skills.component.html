@@ -1,1 +1,37 @@
-<p>skills works!</p>
+<div class="skills glass">
+    <div class="skills-top">
+        <div class="skills-top-title">
+            <img src="/assets/chess_horse.png" alt="horse-img" class="h-2">
+            <h3>Skills</h3>
+        </div>
+    </div>
+    <div class="skills-middle">
+        <p>I am confident with</p>
+        <div class="skills-container">
+            <div class="skills-group" *ngFor="let skill of skills"><img src="/assets/{{ skill | lowercase }}.png"
+                    alt="skills-img" class="h-1">{{
+                skill
+                }}</div>
+        </div>
+
+        <div class="line"></div>
+
+        <p class="skills-heading">I have used in past projects</p>
+        <div class="skills-container">
+            <div class="skills-group" *ngFor="let skill of skillsUsedBefore"><img
+                    src="/assets/{{ skill | lowercase }}.png" alt="skills-img" class="h-1">{{
+                skill
+                }}</div>
+        </div>
+
+        <div class="line"></div>
+
+        <p class="skills-heading">I want to learn/solidify in near future</p>
+        <div class="skills-container">
+            <div class="skills-group" *ngFor="let skill of skillsWantToLearn"><img
+                    src="/assets/{{ skill | lowercase }}.png" alt="skills-img" class="h-1">{{
+                skill
+                }}</div>
+        </div>
+    </div>
+</div>
