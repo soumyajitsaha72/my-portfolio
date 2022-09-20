@@ -16,17 +16,18 @@
 
         <div class="line"></div>
 
-        <div class="container">
+        <div class="container" (click)="openCloseStudies()">
             <div class="container-top">
                 <div class="container-top-left">
                     <img src="/assets/reading.png" alt="container-img" class="h-1">
                     <h4>My Studies</h4>
                 </div>
-                <div class="container-top-right"><img src="/assets/down-arrow.png" alt="container-img" class="h-1">
+                <div class="container-top-right"><img src="/assets/down-arrow.png" alt="container-img" class="h-1"
+                        [class.rotate]="!openStudies">
                 </div>
             </div>
         </div>
-        <div class="container-bottom">
+        <div class="container-bottom" [hidden]="openStudies">
             <p>All my knowledge comes from my "self-taught" studies and the experience acquired in my projects.</p>
             <p>From time to time, I like to put together a study plan based on the things that I feel like learning
                 and think will be most useful to me. Then I dedicate a couple of hours each day until I complete it.
@@ -35,17 +36,18 @@
 
         <div class="line"></div>
 
-        <div class="container">
+        <div class="container" (click)="openCloseDailyLife()">
             <div class="container-top">
                 <div class="container-top-left">
                     <img src="/assets/check_calendar.png" alt="container-img" class="h-1">
                     <h4>My daily life</h4>
                 </div>
-                <div class="container-top-right"><img src="/assets/down-arrow.png" alt="container-img" class="h-1">
+                <div class="container-top-right"><img src="/assets/down-arrow.png" alt="container-img" class="h-1"
+                        [class.rotate]="!openDailyLife">
                 </div>
             </div>
         </div>
-        <div class="container-bottom">
+        <div class="container-bottom" [hidden]="openDailyLife">
             <p>I consider it extremely important to maintain a balanced life, which implies:</p>
             <ul>
                 <li>Not to exceed my working hours.</li>
@@ -57,17 +59,18 @@
 
         <div class="line"></div>
 
-        <div class="container">
+        <div class="container" (click)="openCloseNotes()">
             <div class="container-top">
                 <div class="container-top-left">
                     <img src="/assets/notebook.png" alt="container-img" class="h-1">
                     <h4>My notes</h4>
                 </div>
-                <div class="container-top-right"><img src="/assets/down-arrow.png" alt="container-img" class="h-1">
+                <div class="container-top-right"><img src="/assets/down-arrow.png" alt="container-img" class="h-1"
+                        [class.rotate]="!openNotes">
                 </div>
             </div>
         </div>
-        <div class="container-bottom">
+        <div class="container-bottom" [hidden]="openNotes">
             <p>When I learn something new, I like to write it down so I don't forget it. Explained in my own words so
                 that, at least for me, it is easier to understand.</p>
         </div>

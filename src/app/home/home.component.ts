@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import RINGS from "vanta/dist/vanta.waves.min.js";
 import * as THREE from "three";
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,12 @@ import * as THREE from "three";
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('vantaEl') vantaRef: ElementRef;
 
-  constructor() { }
+  scrollTo(target: string) {
+    console.log("clicked")
+    this.viewportScroller.scrollToAnchor(target);
+  }
+
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
 
@@ -25,7 +31,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       gyroControls: false,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: '#000000'
+      // shininess: 41.00,
+      // waveHeight: 15.00,
+      // waveSpeed: 1.50,
+      // zoom: 1,
+      color: "#000000",
+      // color: 0xd0e18
     })
   }
 

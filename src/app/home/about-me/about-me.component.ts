@@ -12,4 +12,18 @@ export class AboutMeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openStudies = true;
+  openCloseStudies() {
+    this.openStudies = !this.openStudies;
+  }
+
+  openDailyLife = true;
+  openCloseDailyLife() {
+    this.openDailyLife = !this.openDailyLife;
+  }
+
+  openNotes = true;
+  openCloseNotes() {
+    this.openNotes = !this.openNotes;
+  }
 }

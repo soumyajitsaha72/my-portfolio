@@ -1,1 +1,30 @@
-<p>projects works!</p>
+<div class="projects glass">
+    <div class="projects-top">
+        <div class="projects-top-title">
+            <img src="/assets/briefcase.png" alt="briefcase-img" class="h-2">
+            <h3>Projects</h3>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="projects-middle">
+
+        <div *ngFor="let project of projects" class="projects-container" (mouseleave)="onMouseLeave()"
+            (mouseenter)="onMouseEnter(project.id)">
+            <div *ngIf="displayNumber===project.id" class="secret-div">
+                <a href="{{ project.links.github }}"><img src="/assets/github.png" alt="github-img" class="h-2"></a>
+                <a href="{{ project.links.live }}" class="secret-div-live">Live!</a>
+            </div>
+            <div class="projects-img"><img src="{{ project.img }}" alt="project-img"></div>
+            <div class="projects-info">
+                <div class="projects-info-heading">
+                    <h4>{{ project.name }}</h4>
+                    <p>{{ project.year }}</p>
+                </div>
+                <p>{{ project.info }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

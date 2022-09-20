@@ -1,13 +1,5 @@
-.glass {
-    -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
-    backdrop-filter: blur(8px); /* Chrome and Opera */
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
-    border: 1px solid #ffffff20;
-    border-radius: 0.75rem;
-}
-
 .intro {
-    margin-top: 8em;
+    margin-top: 4em;
 }
 
 .intro-top {
@@ -58,9 +50,7 @@
     transform: scale(1.5);
 }
 
-.h-2 {
-    height: 2rem;
-}
+
 
 .intro-bottom {
     padding : 2rem 1.5rem;
@@ -98,6 +88,10 @@
     gap: 1rem;
 }
 
+.intro-bottom-top-links a:hover {
+    cursor: pointer;
+}
+
 .intro-bottom-middle {
     font-weight: 300;
     font-size: large;
@@ -119,6 +113,10 @@
     background-color: inherit;
     color: white;
     margin: 1rem;
+}
+
+.intro-bottom-bottom button:hover {
+    cursor: pointer;
 }
 
 .intro-bottom-bottom button:last-child {
