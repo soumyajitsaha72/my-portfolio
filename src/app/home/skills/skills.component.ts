@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyInfo } from 'src/app/my-info.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  skills: string[] = ["HTML", "CSS", "Javascript", "TypeScript", "Angular", "Java", "Spring Boot"];
-  skillsUsedBefore: string[] = ["MongoDb", "React"];
-  skillsWantToLearn: string[] = ["Vue", "GraphQL", "MongoDb", "React"];
+  skills: string[];
+  skillsUsedBefore: string[];
+  skillsWantToLearn: string[];
 
-  constructor() { }
+  constructor(private myInfo: MyInfo) { }
 
   ngOnInit(): void {
+    this.skills = this.myInfo.skills;
+    this.skillsUsedBefore = this.myInfo.skillsUsedBefore;
+    this.skillsWantToLearn = this.myInfo.skillsWantToLearn;
   }
 
 }

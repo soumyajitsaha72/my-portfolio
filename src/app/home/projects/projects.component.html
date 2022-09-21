@@ -22,7 +22,7 @@
                     <h4>{{ project.name }}</h4>
                     <p>{{ project.year }}</p>
                 </div>
-                <p>{{ project.info }}</p>
+                <p #projectInfo>{{ project.info | slice:0:sliceEnd }}...</p>
             </div>
         </div>
 

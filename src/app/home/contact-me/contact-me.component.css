@@ -1,0 +1,58 @@
+.skills {
+    padding : 2rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+}
+
+.skills-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skills-top-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skills-top-title h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.skills-middle {
+    font-weight: 300;
+    font-size: large;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skills-container:last-of-type {
+    margin-bottom : 0;
+}
+
+.skills-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.skills-heading {
+    margin-top: 1rem;
+}

@@ -2,8 +2,8 @@
     <div class="intro-top">
         <img class="left-img" src="/assets/curve.png" alt="curve-img">
         <div class="name-title">
-            <h1 class="name">Soumyajit Saha</h1>
-            <h2 class="title">Web Developer / Angular</h2>
+            <h1 class="name">{{ fullName }}</h1>
+            <h2 class="title">{{ designation }}</h2>
         </div>
         <div class="photo">
             <img src="/assets/soumyajit_photo.jpg" alt="soumyajit-img">
@@ -25,14 +25,12 @@
                         alt="instagram-img" class="h-1"></a>
             </div>
         </div>
-        <div class="intro-bottom-middle">I am a software developer from adra, India, who loves to create and explore new
-            things
-        </div>
+        <div class="intro-bottom-middle">{{ introBio }}</div>
         <div class="intro-bottom-bottom">
-            <button>About me</button>
-            <button>Skills</button>
-            <button>Projects</button>
-            <button>Contact me</button>
+            <button (click)="onClickAboutMe()">About me</button>
+            <button (click)="onClickSkills()">Skills</button>
+            <button (click)="onClickProjects()">Projects</button>
+            <button (click)="onClickContactMe()">Contact me</button>
             <button>Download Resume</button>
         </div>
     </div>

@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('vantaEl') vantaRef: ElementRef;
 
   scrollTo(target: string) {
-    console.log("clicked")
     this.viewportScroller.scrollToAnchor(target);
   }
 
