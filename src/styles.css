@@ -30,6 +30,10 @@ html {
     height: 1.5rem
 }
 
+.h-0 {
+    height: 0.8rem;
+}
+
 .line {
     background-color: #ffffff20;
     width: 100%;

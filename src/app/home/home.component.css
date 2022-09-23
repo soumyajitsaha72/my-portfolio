@@ -14,6 +14,34 @@
     padding: 0 24%;
 }
 
+.back-to-top-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 0.25rem;
+    height: 3rem;
+    width: 8rem;
+    background: transparent;
+    border: 1px solid white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    z-index: 1;
+}
+
+.back-to-top-button:hover {
+    opacity: 0.4;
+}
+
+.back-to-top-button img{
+    transform: rotate(180deg);
+    height: 1rem;
+}
+
 @media (max-width: 1074px) {
     .home {
         padding: 0 20%;

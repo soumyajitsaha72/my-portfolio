@@ -117,6 +117,7 @@
 
 .intro-bottom-bottom button:hover {
     cursor: pointer;
+    opacity: 0.4;
 }
 
 .intro-bottom-bottom button:last-child {

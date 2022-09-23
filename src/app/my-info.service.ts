@@ -8,7 +8,7 @@ export class MyInfo {
     introBio = "Hi! I am Soumyajit, a developer from Adra, India, who loves to create and explore new things. Currently, I'm working in EY.";
 
     skills: string[] = ["HTML", "CSS", "Javascript", "TypeScript", "Angular", "Java", "Spring Boot"];
-    skillsUsedBefore: string[] = ["MongoDb", "React"];
+    skillsUsedBefore: string[] = ["MongoDb", "React", "Express"];
     skillsWantToLearn: string[] = ["Vue", "GraphQL", "MongoDb", "React"];
 
     projects = [

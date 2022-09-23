@@ -1,4 +1,4 @@
-.skills {
+.contacts {
     padding : 2rem 1.5rem;
 
     display: flex;
@@ -7,52 +7,78 @@
     gap: 2rem;
 }
 
-.skills-top {
+.contacts-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.skills-top-title {
+.contacts-top-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.skills-top-title h3 {
+.contacts-top-title h3 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
     margin-left: 1rem;
 }
 
-.skills-middle {
+.contacts-middle {
     font-weight: 300;
     font-size: large;
     
     display: flex;
+    flex-direction: row;
+}
+
+.contacts-middle form {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.contacts-middle form input {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #ffffff48;
+    border-radius: 0.25rem;
+    color: white;
+    font-weight: bold;
+}
+
+.contacts-middle form textarea {
+    height: 12rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #ffffff48;
+    border-radius: 0.25rem;
+    color: white;
+    font-weight: bold;
+}
+
+.contacts-middle form button {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid #ffffff48;
+    border-radius: 0.25rem;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
 }
 
-.skills-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2rem 0;
+.contacts-middle form button:hover {
+    opacity: 0.4;
 }
 
-.skills-container:last-of-type {
-    margin-bottom : 0;
+.contacts-middle form button img {
+    transform: rotate(-90deg);
 }
 
-.skills-group {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-}
-
-.skills-heading {
-    margin-top: 1rem;
-}
