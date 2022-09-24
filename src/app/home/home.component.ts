@@ -1,6 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import FOG from "vanta/dist/vanta.fog.min.js";
-import * as THREE from "three";
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 
 @Component({
@@ -8,8 +6,7 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild('vantaEl') vantaRef: ElementRef;
+export class HomeComponent implements OnInit {
 
   scrollTo(target: string) {
     this.viewportScroller.scrollToAnchor(target);
@@ -19,28 +16,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-  }
-
-  ngAfterViewInit(): void {
-    FOG({
-      THREE: THREE,
-      el: this.vantaRef.nativeElement,
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      highlightColor: 0x5f542c,
-      midtoneColor: 0x82291d,
-      lowlightColor: 0x2c00ff,
-      baseColor: 0x0,
-      // shininess: 41.00,
-      // waveHeight: 15.00,
-      // waveSpeed: 1.50,
-      // zoom: 0.2,
-      // color: "#000000",
-      // color: 0xd0e18
-    })
   }
 
   //This code is taken from w3Schools... It's responsible for backToTop button.
