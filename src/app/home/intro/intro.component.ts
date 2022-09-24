@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { saveAs } from 'file-saver';
 import { MyInfo } from 'src/app/my-info.service';
+
 
 @Component({
   selector: 'app-intro',
@@ -19,6 +21,12 @@ export class IntroComponent implements OnInit {
     this.designation = this.myInfo.designation;
     this.introBio = this.myInfo.introBio;
   }
+
+  // download() {
+  //   this.downloads
+  //     .download('/downloads/archive.zip')
+  //     .subscribe(blob => saveAs(blob, 'archive.zip'))
+  // }
 
   onClickAboutMe() {
     this.buttonClicked.emit("about-me");
