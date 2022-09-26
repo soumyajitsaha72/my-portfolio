@@ -10,6 +10,7 @@ import { SkillsComponent } from './home/skills/skills.component';
 import { ProjectsComponent } from './home/projects/projects.component';
 import { ContactMeComponent } from './home/contact-me/contact-me.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './home/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

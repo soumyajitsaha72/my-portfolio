@@ -47,7 +47,17 @@
     border: 1px solid #ffffff48;
     border-radius: 0.25rem;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.contacts-middle form input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.contacts-middle form textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
 }
 
 .contacts-middle form textarea {
@@ -57,12 +67,14 @@
     border: 1px solid #ffffff48;
     border-radius: 0.25rem;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
 .contacts-middle form button {
     padding: 0.5rem 1rem;
-    background-color: white;
+    background-color: #00B288;
     border: 1px solid #ffffff48;
     border-radius: 0.25rem;
     font-weight: bold;
@@ -72,13 +84,32 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
+}
+
+.contacts-middle form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.contacts-middle form button:disabled img{
+    opacity: 0.3;
 }
 
 .contacts-middle form button:hover {
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
-.contacts-middle form button img {
-    transform: rotate(-90deg);
+.msg {
+    background-color: #00B288;
+    color: black;
+    font-weight: bold;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    font-size: small;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-

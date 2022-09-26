@@ -31,7 +31,10 @@
             <button (click)="onClickSkills()">Skills</button>
             <button (click)="onClickProjects()">Projects</button>
             <button (click)="onClickContactMe()">Contact me</button>
-            <!-- <button [href]="download.url" [download]="download.filename">Download Resume</button> -->
+
+            <a #target href="{{ resume.downloadLink }}" download="{{ resume.downloadFile }}" target="_blank"
+                [hidden]="true"></a>
+            <button (click)="onClickDownload()">Download Resume</button>
         </div>
     </div>
 </div>

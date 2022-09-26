@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { saveAs } from 'file-saver';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { MyInfo } from 'src/app/my-info.service';
 
 
@@ -13,6 +12,7 @@ export class IntroComponent implements OnInit {
   fullName: string;
   designation: string;
   introBio: string;
+  resume: { downloadLink: string; downloadFile: string; };
 
   constructor(private myInfo: MyInfo) { }
 
@@ -20,13 +20,13 @@ export class IntroComponent implements OnInit {
     this.fullName = this.myInfo.firstName + " " + this.myInfo.lastName;
     this.designation = this.myInfo.designation;
     this.introBio = this.myInfo.introBio;
+    this.resume = this.myInfo.resumeDownload;
   }
 
-  // download() {
-  //   this.downloads
-  //     .download('/downloads/archive.zip')
-  //     .subscribe(blob => saveAs(blob, 'archive.zip'))
-  // }
+  @ViewChild("target") resumeRef: ElementRef;
+  onClickDownload() {
+    this.resumeRef.nativeElement.click();
+  }
 
   onClickAboutMe() {
     this.buttonClicked.emit("about-me");

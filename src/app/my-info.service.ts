@@ -6,8 +6,14 @@ export class MyInfo {
     lastName = "Saha";
     designation = "Web Developer / Angular";
     introBio = "Hi! I am Soumyajit, a developer from Adra, India, who loves to create and explore new things. Currently, I'm working in EY.";
+    resumeDownload = {
+        downloadLink: "/assets/angular.png",
+        downloadFile: "angular.png"
+    }
 
-    skills: string[] = ["HTML", "CSS", "Javascript", "TypeScript", "Angular", "Java", "Spring Boot"];
+
+
+    skills: string[] = ["HTML", "CSS", "Javascript", "TypeScript", "Angular", "Java", "Spring Boot", "MySQL"];
     skillsUsedBefore: string[] = ["MongoDb", "React", "Express"];
     skillsWantToLearn: string[] = ["Vue", "GraphQL", "MongoDb", "React"];
 

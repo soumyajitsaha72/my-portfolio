@@ -4,13 +4,15 @@
             <img src="/assets/credentials.png" alt="credentials-img" class="h-2">
             <h3>Contact me</h3>
         </div>
+        <p class="msg" *ngIf="showMsg">Sent!</p>
     </div>
     <div class="contacts-middle">
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Send <img src="/assets/down-arrow.png" alt="arrow-img" class="h-0"></button>
+        <form (submit)="onSubmitForm()" #contactForm="ngForm">
+            <input type="text" placeholder="Name" required ngModel name="name">
+            <input type="email" placeholder="Email" required ngModel name="email">
+            <textarea placeholder="Message" required ngModel name="message" minlength="1"></textarea>
+            <button type="submit" [disabled]="!contactForm.valid">Send <img src="/assets/right-arrow.png"
+                    alt="arrow-img" class="h-0"></button>
         </form>
     </div>
 </div>
