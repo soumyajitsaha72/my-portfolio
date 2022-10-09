@@ -16,14 +16,14 @@ export class ProjectsComponent implements OnInit {
 
   sliceEnd: number;
   private detectScreenSize() {
-    this.sliceEnd = this.projectInfoEl.nativeElement.clientWidth / 8;
+    this.sliceEnd = this.projectInfoEl.nativeElement.clientWidth / 10;
   }
 
   constructor(private myInfo: MyInfo) { }
 
   ngOnInit(): void {
     this.projects = this.myInfo.projects;
-    this.sliceEnd = window.innerWidth / 18;
+    this.sliceEnd = window.innerWidth / 20;
   }
 
 

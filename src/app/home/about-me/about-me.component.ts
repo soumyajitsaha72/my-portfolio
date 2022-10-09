@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
+  age: Number;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.age = Math.abs(new Date(Date.now() - new Date("10/29/1998").getTime()).getFullYear() - 1970);
   }
 
   openStudies = true;
